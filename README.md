@@ -1,7 +1,6 @@
-# volumen
-An ancient papyrus reader and AI tool.
-Volumen - An Ancient Papyrus Reader
+# VOLUMEN
 
+An Ancient Papyrus Reader
 An AI-assisted desktop application for reading and analysing ancient papyrus fragments.
 
 ## Features
