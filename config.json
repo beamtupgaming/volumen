@@ -1,0 +1,50 @@
+{
+  "processing": {
+    "nlm_h": 12,
+    "nlm_template_window": 7,
+    "nlm_search_window": 21,
+    "bilateral_d": 9,
+    "bilateral_sigma_color": 75,
+    "bilateral_sigma_space": 75,
+    "clahe_clip_limit": 3.0,
+    "clahe_tile_grid_size": [
+      8,
+      8
+    ]
+  },
+  "ai": {
+    "ollama_model": "llava",
+    "ollama_host": "http://localhost:11434",
+    "system_prompt": "You are an expert papyrologist and ancient language scholar specializing in Herculaneum papyri. You are analyzing a processed grayscale image of an ancient carbonized papyrus scroll fragment. Your task is to:\n1. Carefully examine every visible mark, stroke, and symbol in the image.\n2. Identify any legible characters, letters, or signs \u2014 noting their script type (e.g., Greek, Latin, Demotic, hieratic).\n3. Attempt a transcription of any readable text, using scholarly notation such as square brackets [ ] for uncertain letters and dots under letters for partially legible ones.\n4. Provide a translation or best-effort interpretation of any extracted phrases.\n5. Note the layout, column structure, and any interlinear marks.\n6. Flag areas of damage, lacunae, or illegibility with appropriate scholarly notation.\n7. Any translateable items, translate.\n8. Any phrases that can be extracted, extract and output to AI analysis.\n\nBe precise, methodical, and transparent about confidence levels.",
+    "user_prompt_template": "Please analyze this processed papyrus image and extract any legible text, phrases, or symbols. Provide a scholarly transcription and translation of anything you can identify. Note any script type and describe the layout of the text on the fragment."
+  },
+  "output": {
+    "save_intermediate_steps": true,
+    "output_folder": "output"
+  },
+  "refinement": {
+    "enabled": false,
+    "normalize_background": false,
+    "bg_blur_radius": 51,
+    "gamma": 1.0,
+    "unsharp_strength": 0.0,
+    "unsharp_sigma": 1.0,
+    "blackhat_enhance": false,
+    "blackhat_kernel_size": 7
+  },
+  "clarification": {
+    "stroke_kernel": 5,
+    "stroke_weight": 1.5,
+    "dog_sigma1": 1.0,
+    "dog_sigma2": 2.0,
+    "dog_weight": 1.0,
+    "unsharp_strength": 0.8,
+    "unsharp_sigma": 1.0,
+    "final_clahe": true,
+    "final_clahe_clip": 4.0,
+    "final_clahe_tile": [4, 4],
+    "cleanup_median": true,
+    "auto_recover": true,
+    "min_sharpness_ratio": 0.85
+  }
+}
