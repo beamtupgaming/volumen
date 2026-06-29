@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/29446072/README.md)
 # volumen
 An ancient papyrus reader and AI tool.
 Volumen - An Ancient Papyrus Reader
